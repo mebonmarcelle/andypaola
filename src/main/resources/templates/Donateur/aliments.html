@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Besoin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{./css/aliments.css}" rel="stylesheet" />
+</head>
+
+<div class="container-fluid">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+
+            <div class="logo-container">
+                <img th:src="@{/image/logo sout.PNG}" class="d-block w-100" alt="image" style="width:40px; height:100px;">
+                <!--                <span class="logo-text" STYLE="color:#00008B; text-align: center;">ORPHECA</span>-->
+            </div>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="home-page" class="nav-link blue">Accueil</a></li>
+            <li class="nav-item"><a href="utilisateurs/registration" class="nav-link">Users</a></li>
+            <li class="nav-item"><a href="aliments" class="nav-link">Besoins</a></li>
+            <li class="nav-item"><a href="besoins" class="nav-link">Necessite</a></li>
+            <li class="nav-item"><a href="appointment" class="nav-link">Rendez-vous </a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Forum</a></li>
+        </ul>
+        <!--        <div class="btn-group" role="group" aria-label="Basic example">-->
+        <!--            <li><a href="Login" class="btn btn-primary" style="margin-left:50px;">Login In</a></li>-->
+        <!--            &lt;!&ndash;            <button type="button" class="btn btn-primary">Sign-up</button>&ndash;&gt;-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </header>
+</div>
+
+<style>
+    body{
+    background: rgba(0, 0, 0, 0.5) url("/image/besoin1.jpg");
+    width:100%;
+    margin:0;
+    background-blend-mode:darken;
+    background-position:center;
+    background-size:cover;
+    backdrop-filter:blur(8px);
+    }
+
+</style>
+
+<div class="container" style="text-align:center; margin: 0 auto;  background-color:#ADD8E6; height:500px;margin-top:50px; color:#000000;border-radius:10px;">
+<h1> BIENVENU A L'ORPHELINAT MONT SINAI</h1>
+<p> Nous sommes une association qui a vu le jour cela fait pres de 10 ans ayant pour but d'aider au mieux les enfants se trouvant dans des situations sociales pour qu'ils deviennent des hommes et des femmes demain.
+    Aidez nous a les aider.</p>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>riz</td>
+
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Spagetti</td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>poisson</td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>viande</td>
+    </tr>
+
+    <tr>
+        <th scope="row">5</th>
+        <td>savon</td>
+    </tr>
+    <tr>
+        <th scope="row">6</th>
+        <td>crudite</td>
+    </tr>
+    </tbody>
+</table>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="Profil" class="btn btn-primary" style="margin-left:900px;">Faire un don</a>
+    </div>
+</div>
+</body>
+</html>

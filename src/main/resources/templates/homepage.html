@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{./css/homepage.css}" rel="stylesheet" />
+</head>
+
+<div class="container-fluid">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+     <div class="col-md-3 mb-2 mb-md-0">
+
+            <div class="logo-container">
+            <img th:src="@{/image/logo sout.PNG}" class="d-block w-100" alt="image" style="width:40px; height:100px;">
+<!--                <span class="logo-text" STYLE="color:#00008B; text-align: center;">ORPHECA</span>-->
+            </div>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="home-page" class="nav-link px-2 link-secondary">Accueil</a></li>
+            <li class="nav-item"><a href="utilisateurs/registration" class="nav-link">Users</a></li>
+            <li class="nav-item"><a href="aliments" class="nav-link">Besoins</a></li>
+            <li class="nav-item"><a href="besoins" class="nav-link">Necessite</a></li>
+            <li class="nav-item"><a href="appointment" class="nav-link">Rendez-vous </a></li>
+            <li class="nav-item"><a href="Forum" class="nav-link">Forum</a></li>
+        </ul>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <li><a href="Login" class="btn btn-primary" style="margin-left:50px;">Login In</a></li>
+<!--            <button type="button" class="btn btn-primary">Sign-up</button>-->
+        </ul>
+        </div>
+    </header>
+</div>
+
+<body>
+<div class="jumbotron custom-bg-color" style="background-color:#800080">
+    <!--<div class="container py-4" >-->
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold" style="color:#FFA500;font-style:italic; font-size:20px">INFORMATIONS UTILES</h1>
+            <h1 class="display-5 fw-bold">ORPHECA c'est quoi?</h1>
+            <p class="col-md-8 fs-4"> Orpheca est une plateforme qui permet aux orphelins d'avoir une alimentation equilibree en fonction de leurs besoins nutritionnels.</p>
+        </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+            <div class="h-100 p-5 text-bg-white rounded-3" style="color:#ffffff; margin-top:50px;">
+                <h2>SANTE, AMOUR ET SOLIDARITE</h2>
+                <p>La joie de savoir et voir le regard des enfants remplis d'espoir et de bonheur est l'objectif majeur de notre plateforme .</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="h-100 p-5 text-bg-white rounded-3" >
+                <img th:src="@{/image/sout.jpg}" class="d-block w-100" alt="image" style="width:90px; height:250px;">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

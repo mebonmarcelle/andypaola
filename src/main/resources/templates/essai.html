@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Essai</title>
+<!--  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" th:src="@{./js.js/essai.js}"> </script>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link th:href= "@{./css/essai.css}" rel="stylesheet" />
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="title-text">
+    <div class="title login">Login</div>
+    <div class="title signup">Signup</div>
+  </div>
+  <div class="form-container">
+    <div class="slide-controls">
+      <input type="radio" name="slide" id="login" checked>
+      <input type="radio" name="slide" id="signup">
+      <label for="login" class="slide login">Login</label>
+      <label for="signup" class="slide signup">Signup</label>
+      <div class="slider-tab"></div>
+    </div>
+    <div class="form-inner">
+      <form th:action="@{/login}">
+<!--      <form action="#" class="login">-->
+        <div class="field">
+          <input type="text" placeholder="Email" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="pass-link"><a href="#">Mot de passe oublie?</a></div>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Pas encore enregistre? <a href="">Signup now</a></div>
+      </form>
+      <form th:action="@{/signup}">
+<!--      <form action="#" class="signup">-->
+        <div class="field">
+          <input type="text" placeholder="Nom" required>
+        </div>
+        <div class="field">
+          <input type="text" placeholder="Prenom" required>
+        </div>
+        <div class="field">
+          <input type="text" placeholder="Email" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Mot de passe" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Confirmer mot de passe" required>
+        </div>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Enregistre">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

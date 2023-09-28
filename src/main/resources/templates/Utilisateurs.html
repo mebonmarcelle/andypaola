@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>utlitsateurs</title>
+    <link href="/templates/" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{./css/utilisateurs.css}" rel="stylesheet" />
+    <link th:href= "@{./css/search.css}" rel="stylesheet" />
+    <link th:href= "@{./css/modal.css}" rel="stylesheet" />
+</head>
+<div class="container-fluid">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+
+            <div class="logo-container">
+                <img th:src="@{/image/logo sout.PNG}" class="d-block w-100" alt="image" style="width:40px; height:100px;">
+                <!--                <span class="logo-text" STYLE="color:#00008B; text-align: center;">ORPHECA</span>-->
+            </div>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="home-page" class="nav-link blue">Accueil</a></li>
+            <li class="nav-item"><a href="utilisateurs/registration" class="nav-link">Users</a></li>
+            <li class="nav-item"><a href="aliments" class="nav-link">Besoins</a></li>
+            <li class="nav-item"><a href="besoins" class="nav-link">Necessite</a></li>
+            <li class="nav-item"><a href="appointment" class="nav-link">Rendez-vous </a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Forum</a></li>
+        </ul>
+        <!--        <div class="btn-group" role="group" aria-label="Basic example">-->
+        <!--            <li><a href="Login" class="btn btn-primary" style="margin-left:50px;">Login In</a></li>-->
+        <!--            &lt;!&ndash;            <button type="button" class="btn btn-primary">Sign-up</button>&ndash;&gt;-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </header>
+</div>
+
+  <body>
+
+  <style>
+      body{
+   background: rgba(0, 0, 0, 0.5) url("/image/profil1.webp");
+   width:100%;
+   margin:0;
+   background-blend-mode:darken;
+   background-position:center;
+   background-size:cover;
+   }
+
+   .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #800080;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: white;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:bleu clair;
+    transition: width 0.4s linear;
+    }
+
+ .searchbar:hover > .search_icon{
+   background: black;
+   color:white;
+   }
+
+   .search_icon{
+   height: 40px;
+   width: 40px;
+   float: right;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   color:white;
+   }
+  </style>
+
+  <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+          <div class="searchbar">
+              <input class="search_input" type="text" name="" placeholder="Search...">
+              <a href="" class="search_icon"><i class="fas fa-search"></i></a>
+          </div>
+      </div>
+  </div>
+
+<style>
+    .button{
+    background-color:#0000FF;
+    color:#ADD8E6;
+    padding:5px 10px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    }
+</style>
+
+<div class="container">
+    <h2 style="color :white; margin-top:20px;">Liste des utilisateurs</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mot de passe</th>
+        <th scope="col">Role</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <th scope="row" th:text="${user.id}"></th>
+        <td th:text="${user.nom}"></td>
+        <td th:text="${user.prenom}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.mot_de_passe}"></td>
+        <td th:text="${user.role}"></td>
+        <td><button class="button">Desactiver</button></td>
+        <td><button class="button">Activer</button></td>
+    </tr>
+<!--    <tr>-->
+<!--        <th scope="row">2</th>-->
+<!--        <td>Mebon</td>-->
+<!--        <td>Marcelle</td>-->
+<!--        <td>@gmail.com</td>-->
+<!--        <td>34578</td>-->
+<!--        <td>Administrateur</td>-->
+<!--        <td><button class="button">Desactiver</button></td>-->
+<!--        <td><button class="button">Activer</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th scope="row">3</th>-->
+<!--        <td> kengne</td>-->
+<!--        <td>Ange</td>-->
+<!--        <td>@twitter.com</td>-->
+<!--        <td>67890</td>-->
+<!--        <td>Donateur</td>-->
+<!--        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+<!--            Desactiver-->
+<!--        </button></td>-->
+<!--        <td><button class="button">Activer</button></td>-->
+<!--    </tr>-->
+    </tbody>
+</table>
+</div>
+  <!-- Button trigger modal -->
+  <!--    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+  <!--        Launch demo modal-->
+  <!--    </button>-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Notification</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Open"></button>
+              </div>
+              <div class="modal-body">
+                  Voulez-vous vraiment desactiver ce compte?
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Oui</button>
+                  <button type="button" class="btn btn-primary">Non</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

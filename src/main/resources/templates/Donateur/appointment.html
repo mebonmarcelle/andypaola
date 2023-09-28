@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de rendez-vous</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{/css/appointment.css}" rel="stylesheet" />
+</head>
+<div class="container-fluid">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+
+            <div class="logo-container">
+                <img th:src="@{/image/logo sout.PNG}" class="d-block w-100" alt="image" style="width:40px; height:100px;">
+                <!--                <span class="logo-text" STYLE="color:#00008B; text-align: center;">ORPHECA</span>-->
+            </div>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="home-page" class="nav-link white">Accueil</a></li>
+            <li><a href="utilisateurs/registration" class="nav-link white">Users</a></li>
+            <li class="nav-item"><a href="aliments" class="nav-link white">Besoins</a></li>
+            <li class="nav-item"><a href="besoins" class="nav-link white">Necessite</a></li>
+            <li class="nav-item"><a href="appointment" class="nav-link white">Rendez-vous </a></li>
+            <li class="nav-item"><a href="#" class="nav-link white">Forum</a></li>
+        </ul>
+        <!--        <div class="btn-group" role="group" aria-label="Basic example">-->
+        <!--            <li><a href="Login" class="btn btn-primary" style="margin-left:50px;">Login In</a></li>-->
+        <!--            &lt;!&ndash;            <button type="button" class="btn btn-primary">Sign-up</button>&ndash;&gt;-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </header>
+</div>
+
+<style>
+    body{
+    background: rgba(0, 0, 0, 0.5) url("/image/rendez.jpg");
+    width:100%;
+    margin:0;
+    background-blend-mode:darken;
+    background-position:center;
+    background-size:cover;
+    }
+</style>
+
+ <h2 style="color :#FFFFFF; text-align: center">Formulaire de rendez-vous</h2>
+ <div class="container" style="background:#0080FF;">
+<form action="#" th:action="@{/appointment}" th:object="${appointment}" method="post">
+    <label for="day">Jour:</label>
+    <select id="day" name="day">
+        <option th:each="day : ${#numbers.sequence(1, 31)}" th:value="${day}" th:text="${day}"></option>
+    </select>
+
+    <label for="month">Mois:</label>
+    <select id="month" name="month">
+        <option th:each="month : ${#numbers.sequence(1, 12)}" th:value="${month}" th:text="${month}"></option>
+    </select>
+
+    <label for="year">Année:</label>
+    <select id="year" name="year">
+        <option th:each="year : ${#numbers.sequence(2023, 2030)}" th:value="${year}" th:text="${year}"></option>
+    </select>
+
+    <label for="hour">Heure:</label>
+    <select id="hour" name="hour">
+        <option th:each="hour : ${#numbers.sequence(0, 23)}" th:value="${hour}" th:text="${hour}"></option>
+    </select>
+
+    <label for="minute">Minute:</label>
+    <select id="minute" name="minute">
+        <option th:each="minute : ${#numbers.sequence(0, 59)}" th:value="${minute}" th:text="${minute}"></option>
+    </select>
+
+    <div class="btn-group" role="group" aria-label="Basic example" style="justify-content:center; margin-left:100px; margin-top:50px;background:#FFFFFF;">
+        <button type="button" class="btn btn-primary">CONFIRMER</button>
+        <button type="button" class="btn btn-primary">MODIFIER</button>
+        <button type="button" class="btn btn-primary">ANNULER</button>
+    </div>
+</form>
+</div>
+</body>
+</html>

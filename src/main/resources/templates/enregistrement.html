@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>enregistrement</title>
+<!--    <link href="/templates/" rel="stylesheet">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{/css/enregistrement.css}" rel="stylesheet" />
+
+</head>
+
+<style>
+    body{
+    background:rgba(0, 0, 0, 0.5) url("/image/regis.jpg");
+    width:100%;
+    margin:0;
+    background-blend-mode:darken;
+    background-position:center;
+    background-size:cover;
+    }
+</style>
+
+<div class="card container col-md-6 flex custom-card" style="border-raduis:90px; margin-top: 70px; overflow:hidden; min-width:500px; border:none;">
+
+        <form th:action="@{${enregistrer}?'registrer'}" method="POST" th:object="${user}" class="card-body"  >
+            <div class="text-center">
+            <h2 style="color :darkviolet;">CREER UN COMPTE</h2>
+            </div>
+
+            <div class="mb-3 mb-3">
+                <label for="Nom" class="form-label" style="color :#800080;">Nom</label>
+                <input type="text" th:field="*{nom}"  id="Nom" autofocus="autofocus" class="form-control" required name="Nom">
+            </div>
+
+            <div class="mb-3 ">
+                <label for="Prenom" class="form-label" style="color :#800080;">Prenom</label>
+                <input type="text" th:field="*{prenom}"  id="Prenom" autofocus="autofocus" class="form-control" required name="Prenom">
+            </div>
+
+            <div class="mb-3 ">
+                <label for="Email" class="form-label" style="color :#800080;">Email</label>
+                <input type="email" th:field="*{email}" id="Email" autofocus="autofocus" class="form-control" required name="Email">
+
+            </div>
+
+            <div class="mb-3 ">
+                <label for="Mot de passe" class="form-label" style="color :#800080;">Mot de passe</label>
+                <input type="password" th:field="*{mot_de_passe}" id="Mot de passe" autofocus="autofocus" class="form-control" required name="Mot de passe">
+            </div>
+            <div th:if="${error}" class="alert alert-danger">
+                <p th:text="${error}"></p>
+            </div>
+
+            <div class="d-grid gap-3">
+                <button type="submit" th:action="@{${enregistrer}?'registrer'}" class="btn btn-success btn-block " style="color:#ffffff; background-color :#800080; border-radius:4px;">Enregistrer</button>
+
+            </div>
+<!--            <div class="text-center">-->
+<!--                <span >Deja enregistre?</span>-->
+<!--                <a href="Login" >Connexion</a>-->
+<!--            </div>-->
+        </form>
+
+    </div>
+
+ </body>
+ </html>

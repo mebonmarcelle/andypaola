@@ -1,0 +1,20 @@
+container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.h2{
+color:#ADD8E6
+}
+/*feuille de style de l’agent utilisateur*/
+.container {
+    display: block;
+    margin-left:20px;
+
+}

@@ -1,0 +1,69 @@
+body {
+  background-color: #ffffff;
+
+}
+
+.container {
+  /*largeur maximale du formulaire*/
+  margin: 0 auto; /*centre le formulaire horizontalement*/
+  padding: 20px; /*Espacement interne du formulaire*/
+  background-color: #ffffff; /*couleur fond du formulaire*/
+  width: 400px; margin-top:10px;"
+  border-radius: 5px;
+   border: 1px solid #cccccc;
+
+  .title {
+color : #800080;
+text-align: center;
+  }
+}
+
+/* Forme de connexion */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #800080;
+}
+
+/*style des champs de saisi*/
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/*style du bouton de soumission*/
+.form-group input[type="submit"] {
+  background-color: #000000; /*couleur de fond du bouton de soumission*/
+  color: #ffffff;
+  padding:10px 20px;
+  border:none;
+  border-radius:4px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Liens de navigation */
+.nav-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: #555555;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+}

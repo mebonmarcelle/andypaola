@@ -1,0 +1,39 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc; /* Ajoute une bordure au tableau */
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;/* Ajoute une bordure à droite des cellules */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #D8D8FF;
+}
+
+tfoot {
+    background-color: #fff;
+    color: #fff;
+}
+
+tfoot td {
+    border-bottom: none; /* Supprime la bordure inférieure des cellules du pied de tableau */
+}
+
+tfoot td:first-child {
+    border-left: 1px solid #ccc; /* Ajoute une bordure à gauche de la première cellule du pied de tableau */
+}
+
+tfoot td:last-child {
+    border-right: 1px solid #ccc; /* Ajoute une bordure à droite de la dernière cellule du pied de tableau */
+}

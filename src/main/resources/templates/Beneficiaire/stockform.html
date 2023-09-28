@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Stockform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{/css/stockform.css}" rel="stylesheet" />
+</head>
+
+<body>
+<div class="card container col-md-6 flex custom-card" style="border-raduis:90px; margin-top: 70px; overflow:hidden; min-width:500px; border:none;">
+
+    <form class="card-body"  >
+<!--        <div class="text-center">-->
+<!--            <h2 style="color :darkviolet;">CREER UN COMPTE</h2>-->
+<!--        </div>-->
+
+        <div class="mb-3 mb-3">
+            <label for="Nom aliment" class="form-label" style="color :#800080;">Nom aliment</label>
+            <input type="text"  id="Nom aliment" autofocus="autofocus" class="form-control" required name="Nom aliment">
+        </div>
+
+        <div class="mb-3 ">
+            <label for="Quantite" class="form-label" style="color :#800080;">Quantite</label>
+            <input type="text"  id="Quantite" autofocus="autofocus" class="form-control" required name="Quantite">
+        </div>
+
+        <div class="mb-3 ">
+            <label for="Duree" class="form-label" style="color :#800080;">Duree</label>
+            <input type="text"  id="Duree" autofocus="autofocus" class="form-control" required name="Duree">
+
+        </div>
+
+        <div class="mb-3 ">
+            <label for="Details aliments consommes" class="form-label" style="color :#800080;">Details aliments consommes</label>
+            <input type="text"  id="Details aliments consommes" autofocus="autofocus" class="form-control" required name="Details aliments consommes">
+        </div>
+
+        <div class="mb-3 ">
+            <label for="Date sortie" class="form-label" style="color :#800080;">Date sortie</label>
+            <input type="text"  id="Date sortie" autofocus="autofocus" class="form-control" required name="Date sortie">
+        </div>
+
+        <div class="d-grid gap-3">
+            <button type="submit" class="btn btn-success btn-block " style="color:#ffffff; background-color :#800080; border-radius:4px;">OK</button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+h1{
+text-align: center;
+display: block;
+color :#ffffff;
+
+}
+
+.h-100 p-5.text-bg-White.rounded-3 h2{
+text-align: center;
+display: block;
+color :#800080;
+}
+
+.h-100 p-5.text-bg-White.rounded-3 p{
+color:#ffffff;
+text-align: center;
+}
+
+.h-100 p-5.bg-body-white.border.rounded-3 h2{
+text-align: center;
+display: block;
+color :#800080;
+}
+
+.h-100 p-5.bg-body-white.rounded-3 p{
+color:#ffffff;
+text-align:center;
+}
+
+

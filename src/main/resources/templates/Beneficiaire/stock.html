@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link th:href= "@{/css/stock.css}" rel="stylesheet" />
+</head>
+
+<div class="container-fluid">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+
+            <div class="logo-container">
+                <img th:src="@{/image/logo sout.PNG}" class="d-block w-100" alt="image" style="width:40px; height:100px;">
+                <!--                <span class="logo-text" STYLE="color:#00008B; text-align: center;">ORPHECA</span>-->
+            </div>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="home-page" class="nav-link blue">Accueil</a></li>
+            <li class="nav-item"><a href="utilisateurs/registration" class="nav-link">Users</a></li>
+            <li class="nav-item"><a href="aliments" class="nav-link">Besoins</a></li>
+            <li class="nav-item"><a href="besoins" class="nav-link">Necessite</a></li>
+            <li class="nav-item"><a href="appointment" class="nav-link">Rendez-vous </a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Forum</a></li>
+        </ul>
+        <!--        <div class="btn-group" role="group" aria-label="Basic example">-->
+        <!--            <li><a href="Login" class="btn btn-primary" style="margin-left:50px;">Login In</a></li>-->
+        <!--            &lt;!&ndash;            <button type="button" class="btn btn-primary">Sign-up</button>&ndash;&gt;-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </header>
+</div>
+
+<body>
+<style>
+    body{
+    background: rgba(0, 0, 0, 0.5) url("/image/stock3.jpg");
+    width:100%;
+    margin:0;
+    background-blend-mode:darken;
+    background-position:center;
+    background-size:cover;
+    }
+</style>
+
+<div class="container" style="border-radius:15px; background-color:#ADD8E6;">
+    <h2 style="color :white; margin-top:50px;text-align:center;background-color:#800080;">STOCK MONT SINAI</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Nom aliment</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Duree</th>
+            <th scope="col">Details aliments consommes</th>
+            <th scope="col">Date sortie</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ndolet</td>
+            <td>10kg</td>
+            <td>10 semaines</td>
+            <td>2kg</td>
+            <td>10/03/2023</td>
+            <td><a href="Stockform" class="btn btn-primary">Modifier</a></td>
+        </tr>
+        <tr>
+            <td>Riz</td>
+            <td>2 sacs de 25 kg</td>
+            <td> 1 mois</td>
+            <td>1sacs de 25 kg</td>
+            <td>10/08/23</td>
+            <td><a href="Stockform" class="btn btn-primary">Modifier</a></td>
+        </tr>
+        <tr>
+            <td>sachet tomate</td>
+            <td>100 sachets</td>
+            <td>/</td>
+            <td>/</td>
+            <td>10/02/2023</td>
+            <td><a href="Stockform" class="btn btn-primary">Modifier</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example" style="justify-content:center; margin-left:1000px;">
+    <a href="Stockform" class="btn btn-primary">AJOUTER</a>
+    <a href="besoins" class="btn btn-primary">BESOIN</a>
+</div>
+</body>
+</html>
